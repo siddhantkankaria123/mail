@@ -20,8 +20,8 @@ app.post("/", function (req, res) {
   var mailoptions = {
     from: req.body.email,
     to: "siddhantkankaria122@gmail.com",
-    subject: "Hello this is " + name,
-    text: req.body.message,
+    subject: "Hello",
+    text: `Name:${name} <br/> Message: ${req.body.message}`,
   };
   transporter.sendMail(mailoptions, function (error, info) {
     if (error) {
